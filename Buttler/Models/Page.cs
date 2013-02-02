@@ -8,5 +8,7 @@ namespace Buttler.Models
     public class Page : Unit
     {
         public string Title { get; set; }
+        public string ID { get; set; }
+        public string Slug { get; set; }
     }
 }
