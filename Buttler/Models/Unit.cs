@@ -38,13 +38,12 @@ namespace Buttler.Models
     public interface IFormat
     {
         string Name;
-        string Parse(string raw);
-        
+        string Parse(string raw);        
     }
 
     public class PlainText : IFormat
     {
-        public string Name = "Plaintext";
+        public string Name = "plaintext";
 
         public string Parse(string value)
         {
