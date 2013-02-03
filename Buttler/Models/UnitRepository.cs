@@ -31,6 +31,11 @@ namespace Buttler.Models
             return context.Units.Find(id);
         }
 
+        public Unit Find(string name)
+        {
+            return context.Units.Find(name);
+        }
+
         public void InsertOrUpdate(Unit unit)
         {
             if (unit.ID == default(int)) {

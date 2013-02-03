@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -118,6 +119,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ButtlerContext.cs" />
+    <Compile Include="Models\Exposure.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitRepository.cs" />
@@ -165,6 +167,9 @@
     <EmbeddedResource Include="Migrations\201302031230083_init.resx">
       <DependentUpon>201302031230083_init.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
