@@ -24,3 +24,7 @@ C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\System.Web.WebPages.Deploy
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\System.Web.WebPages.Razor.xml
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.dll
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.pdb
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\EntityFramework.dll
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\EntityFramework.xml
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.Migrations.init.resources
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.csproj.GenerateResource.Cache
