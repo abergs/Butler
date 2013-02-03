@@ -1,4 +1,4 @@
 Buttler
 =======
 
-Easy CMS for .NET
+World class simple CMS for .NET
