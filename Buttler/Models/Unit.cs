@@ -12,11 +12,13 @@ namespace Buttler.Models
             this.ContentFormat = new PlainText();
         }
 
+        // Save in DB
         public string ID { get; set; }
         public string Content { get; set; }
+
         public IFormat ContentFormat { get; set; }
 
-        public string ParsedContent
+        public virtual string ParsedContent
         {
             get
             {
@@ -35,12 +37,14 @@ namespace Buttler.Models
 
     public interface IFormat
     {
+        string Name;
         string Parse(string raw);
+        
     }
 
     public class PlainText : IFormat
     {
-        public const string Name = "plaintext";
+        public string Name = "Plaintext";
 
         public string Parse(string value)
         {
