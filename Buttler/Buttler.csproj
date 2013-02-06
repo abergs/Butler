@@ -108,7 +108,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -119,8 +121,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ButtlerContext.cs" />
+    <Compile Include="Models\DataService.cs" />
     <Compile Include="Models\Exposure.cs" />
     <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\PageRepository.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\UnitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,6 +174,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Edit\MyClass.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Edit\SecondClass.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

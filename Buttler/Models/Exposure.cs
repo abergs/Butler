@@ -14,5 +14,9 @@ namespace Buttler.Client
             Buttler.Models.Unit unit = repo.All.Where(u => u.Name == name).First();
             return unit.ParsedContent;
         }
+
+        public static dynamic Get(string name) {
+            return Buttler.Models.DataService.Get(name);
+        }
     }
 }

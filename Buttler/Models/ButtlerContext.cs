@@ -18,5 +18,7 @@ namespace Buttler.Models
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Buttler.Models.ButtlerContext>());
 
         public DbSet<Unit> Units { get; set; }
+
+        public DbSet<Buttler.Models.Page> Pages { get; set; }
     }
 }
