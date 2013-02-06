@@ -19,9 +19,15 @@ namespace Buttler.Controllers
             dynamic data = DataService.Get(id);
             // Get viewname depending on type
             string viewName = data.GetType().Name;
-            
-            return View(viewName, data);
-        }
 
+            /*var view = View(viewName);
+
+            if (view.View == null)
+            {
+                return View("Index");
+            }*/
+
+            return View(viewName,data);
+        }
     }
 }

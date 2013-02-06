@@ -28,3 +28,9 @@ C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\EntityFramework.dll
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\EntityFramework.xml
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.Migrations.init.resources
 C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\obj\Debug\Buttler.csproj.GenerateResource.Cache
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\Antlr3.Runtime.dll
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\RazorEngine.dll
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\System.Web.Optimization.dll
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\WebGrease.dll
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\RazorEngine.pdb
+C:\Users\Anders\SkyDrive\Webfiles\Buttler\Buttler\bin\RazorEngine.xml
