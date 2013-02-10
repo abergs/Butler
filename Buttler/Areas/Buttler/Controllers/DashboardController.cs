@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Buttler.Controllers
+namespace Buttler.Areas.Buttler.Controllers
 {
     public class DashboardController : Controller
     {
@@ -13,7 +13,9 @@ namespace Buttler.Controllers
 
         public ActionResult Index()
         {
-            return View();
+
+            var model = Buttler.Client.ButtleClient.Get("welcome");
+            return View(model);
         }
     }
 }

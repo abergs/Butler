@@ -23,10 +23,11 @@ namespace Buttler.Models
         }
 
         public static dynamic Get(string id) {
+            id = id.ToLower();
             // How should we structure data?
             // One table with ID / type ?
             // EF would then lookup ID and Type in that table and join the TypeTable for that ID ??
-            return instance.context.Units.FirstOrDefault(p => p.Name == id);
+            return instance.context.Pages.FirstOrDefault(p => p.Name.ToLower() == id);
         }
     }
 }

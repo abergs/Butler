@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Buttler.Models;
 
-namespace Buttler.Client
+namespace Buttler.Areas.Buttler.Client
 {
     public static class ButtleClient
     {
         
         public static string Render(string name)
         {
-            Buttler.Models.UnitRepository repo = new Buttler.Models.UnitRepository();
-            Buttler.Models.Unit unit = repo.All.Where(u => u.Name == name).First();
+            UnitRepository repo = new UnitRepository();
+            Unit unit = repo.All.Where(u => u.Name == name).First();
             return unit.ParsedContent;
         }
 
         public static dynamic Get(string name) {
-            return Buttler.Models.DataService.Get(name);
+            return DataService.Get(name);
         }
     }
 }

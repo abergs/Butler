@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Buttler.Models;
 
-namespace Buttler.Controllers
+namespace Buttler.Areas.Buttler.Controllers
 {   
     public class PagesController : Controller
     {

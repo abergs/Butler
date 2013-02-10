@@ -121,46 +121,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\EditController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PagesController.cs" />
-    <Compile Include="Controllers\UnitsController.cs" />
+    <Compile Include="Areas\Buttler\ButtlerAreaRegistration.cs" />
+    <Compile Include="Areas\Buttler\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Buttler\Controllers\EditController.cs" />
+    <Compile Include="Areas\Buttler\Controllers\PagesController.cs" />
+    <Compile Include="Areas\Buttler\Controllers\UnitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302031230083_init.cs" />
-    <Compile Include="Migrations\201302031230083_init.Designer.cs">
+    <Compile Include="Areas\Buttler\Migrations\201302031230083_init.cs" />
+    <Compile Include="Areas\Buttler\Migrations\201302031230083_init.Designer.cs">
       <DependentUpon>201302031230083_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\ButtlerContext.cs" />
-    <Compile Include="Models\DataService.cs" />
-    <Compile Include="Models\Exposure.cs" />
-    <Compile Include="Models\Page.cs" />
-    <Compile Include="Models\PageRepository.cs" />
-    <Compile Include="Models\RenderService.cs" />
-    <Compile Include="Models\Unit.cs" />
-    <Compile Include="Models\UnitRepository.cs" />
+    <Compile Include="Areas\Buttler\Migrations\Configuration.cs" />
+    <Compile Include="Areas\Buttler\Models\ButtlerContext.cs" />
+    <Compile Include="Areas\Buttler\Models\DataService.cs" />
+    <Compile Include="Areas\Buttler\Models\Exposure.cs" />
+    <Compile Include="Areas\Buttler\Models\Page.cs" />
+    <Compile Include="Areas\Buttler\Models\PageRepository.cs" />
+    <Compile Include="Areas\Buttler\Models\RenderService.cs" />
+    <Compile Include="Areas\Buttler\Models\Unit.cs" />
+    <Compile Include="Areas\Buttler\Models\UnitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <None Include="Content\themes\base\main.less" />
-    <Content Include="Content\themes\base\bootstrap-responsive.css" />
-    <Content Include="Content\themes\base\bootstrap.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\base\main.css">
+    <None Include="Areas\Buttler\Content\themes\base\main.less" />
+    <Content Include="Areas\Buttler\Content\themes\base\bootstrap-responsive.css" />
+    <Content Include="Areas\Buttler\Content\themes\base\bootstrap.css" />
+    <Content Include="Areas\Buttler\Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Areas\Buttler\Content\images\glyphicons-halflings.png" />
+    <Content Include="Areas\Buttler\Content\themes\base\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
-    <Content Include="Content\themes\base\main.min.css">
+    <Content Include="Areas\Buttler\Content\themes\base\main.min.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Buttler\Scripts\bootstrap.js" />
+    <Content Include="Areas\Buttler\Scripts\bootstrap.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -168,14 +169,14 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\Edit\Index.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Uniasdt.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Page.cshtml" />
-    <Content Include="Views\Edit\Unit.cshtml" />
-    <Content Include="Views\_viewstart.cshtml" />
-    <Content Include="Views\Shared\Layout.cshtml" />
-    <Content Include="Views\Shared\Nav.cshtml" />
+    <Content Include="Areas\Buttler\Views\Web.config" />
+    <Content Include="Areas\Buttler\Views\Edit\Index.cshtml" />
+    <Content Include="Areas\Buttler\Views\Shared\EditorTemplates\Uniasdt.cshtml" />
+    <Content Include="Areas\Buttler\Views\Shared\EditorTemplates\Page.cshtml" />
+    <Content Include="Areas\Buttler\Views\Edit\Unit.cshtml" />
+    <Content Include="Areas\Buttler\Views\_viewstart.cshtml" />
+    <Content Include="Areas\Buttler\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Buttler\Views\Shared\Nav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -184,54 +185,54 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\Create.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\Edit.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\Delete.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\Details.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\Index.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Units\_CreateOrEdit.cshtml" />
+    <Content Include="Areas\Buttler\Views\Units\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201302031230083_init.resx">
+    <EmbeddedResource Include="Areas\Buttler\Migrations\201302031230083_init.resx">
       <DependentUpon>201302031230083_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Buttler\Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\Create.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\Edit.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\Delete.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\Details.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\Index.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Pages\_CreateOrEdit.cshtml" />
+    <Content Include="Areas\Buttler\Views\Pages\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Edit\Page.cshtml" />
+    <Content Include="Areas\Buttler\Views\Edit\Page.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Templates\welcome.cshtml" />
+    <Content Include="Areas\Buttler\Views\Templates\welcome.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
