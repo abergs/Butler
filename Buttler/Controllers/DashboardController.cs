@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Buttler.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
         //
         // GET: /Home/
@@ -15,6 +15,5 @@ namespace Buttler.Controllers
         {
             return View();
         }
-
     }
 }
