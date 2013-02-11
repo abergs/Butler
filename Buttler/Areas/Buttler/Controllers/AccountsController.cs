@@ -53,7 +53,7 @@ namespace Buttler.Areas.Buttler.Controllers
         {
             WebSecurity.Logout();
 
-            return RedirectToAction("Index", "Dashboard");
+            return RedirectToAction("Login", "Accounts");
         }
 
         //
