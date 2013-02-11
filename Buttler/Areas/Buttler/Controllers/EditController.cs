@@ -1,4 +1,4 @@
-﻿using Buttler.Models;
+﻿using Buttler.Areas.Buttler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

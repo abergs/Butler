@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 
-namespace Buttler.Models
+namespace Buttler.Areas.Buttler.Models
 { 
     public class PageRepository : IPageRepository
     {

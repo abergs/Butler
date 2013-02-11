@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Buttler.Areas;
 
 namespace Buttler
 {
@@ -17,6 +18,9 @@ namespace Buttler
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Get SimpleMemberShip going
+            Buttler.Areas.Buttler.Models.WebSecurityConfig.InitializeDatabaseConnection();
         }
     }
 }

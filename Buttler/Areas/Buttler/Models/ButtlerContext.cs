@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Buttler.Models
+namespace Buttler.Areas.Buttler.Models
 {
     public class ButtlerContext : DbContext
     {
@@ -19,6 +19,8 @@ namespace Buttler.Models
 
         public DbSet<Unit> Units { get; set; }
 
-        public DbSet<Buttler.Models.Page> Pages { get; set; }
+        public DbSet<Page> Pages { get; set; }
+
+        public DbSet<UserProfile> UserProfiles { get; set; }
     }
 }

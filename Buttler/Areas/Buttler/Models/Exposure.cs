@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Buttler.Models;
+using Buttler.Areas.Buttler.Models;
 
 namespace Buttler.Areas.Buttler.Client
 {

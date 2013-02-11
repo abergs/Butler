@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Buttler.Models
+namespace Buttler.Areas.Buttler.Models
 {
     public class Unit : IUnit
     {
