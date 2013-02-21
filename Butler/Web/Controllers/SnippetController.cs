@@ -13,6 +13,8 @@ namespace Web.Controllers
 
         public ActionResult Index()
         {
+            List<Web.Models.Snippet> snippets = Butler.Store.GetAll<Web.Models.Snippet>();
+
             return View();
         }
 

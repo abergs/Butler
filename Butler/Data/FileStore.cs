@@ -26,6 +26,19 @@ namespace Butler
             return File.ReadAllText(path);
         }
 
+        public static List<string> ReadAll(string path) {
+            path = cleanPath(path);
+            string[] filePaths = Directory.GetFiles(path);
+            List<String> files = new List<string>();
+
+            foreach (string filePath in filePaths)
+            {
+                files.Add(Read(filePath));             
+            }
+
+            return files;
+        }
+
         private static string cleanPath(string path)
         {
             string[] lines = path.Split('\\');

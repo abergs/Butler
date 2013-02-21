@@ -34,10 +34,20 @@ namespace Butler
             }
         }
 
+        public static List<T> GetAll<T>() {
+            var raws = FileStore.ReadAll(getPath<T>(""));
+            var result = new List<T>();
+            raws.ForEach(raw => {
+                result.Add(JsonSerializer.Parse<T>(raw));
+            });
+
+            return result;
+        }
+
         private static T GetModel<T>(string ID)
         {
             var p = getPath<T>(ID);
-            var raw = FileStore.Read(HttpContext.Current.Server.MapPath(p));
+            var raw = FileStore.Read(p);
             return (T)JsonSerializer.Parse<T>(raw);
         }
 
@@ -47,15 +57,14 @@ namespace Butler
             var p = getPath<T>(dynamicmodel.ID);
 
             var raw = JsonSerializer.Serialize(model);
-            FileStore.Save(HttpContext.Current.Server.MapPath(p), raw);
+            FileStore.Save(p, raw);
         }
 
         private static string getPath<T>(string ID)
         {
             Type myType = typeof(T);
             string p = string.Format("{0}/{1}/{2}{3}", path, myType.Name, ID, fileExtension);
-
-            return p;
+            return HttpContext.Current.Server.MapPath(p);
         }
     }
 }
