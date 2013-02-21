@@ -7,33 +7,55 @@ namespace Buttler
 {
     public class Store
     {
-        public static T Get<T> (string ID) where T : new(){
+        private static readonly string path = "~/App_Data/Buttler";
+        private static readonly string fileExtension = ".json";
+
+        public static T Get<T>(string ID) where T : new()
+        {
             try
             {
-                var raw = FileStore.Read(HttpContext.Current.Server.MapPath("~/App_Data/Buttler/" + ID + ".json"));
-                return (T)JsonSerializer.Parse<T>(raw);
+                return GetModel<T>(ID);
             }
             catch (Exception)
             {
                 return new T();
-            }            
+            }
         }
 
-        public static T GetNullable<T>(string ID) {
+        public static T GetNullable<T>(string ID)
+        {
             try
             {
-                var raw = FileStore.Read(HttpContext.Current.Server.MapPath("~/App_Data/Buttler/" + ID + ".json"));
-                return (T)JsonSerializer.Parse<T>(raw);
+                return GetModel<T>(ID);
             }
             catch (Exception)
             {
                 return default(T);
-            }     
+            }
         }
 
-        public static void Save(dynamic model){
+        private static T GetModel<T>(string ID)
+        {
+            var p = getPath<T>(ID);
+            var raw = FileStore.Read(HttpContext.Current.Server.MapPath(p));
+            return (T)JsonSerializer.Parse<T>(raw);
+        }
+
+        public static void Save<T>(T model)
+        {
+            dynamic dynamicmodel = model;
+            var p = getPath<T>(dynamicmodel.ID);
+
             var raw = JsonSerializer.Serialize(model);
-            FileStore.Save(HttpContext.Current.Server.MapPath("~/App_Data/Buttler/" + model.ID + ".json"),raw);
+            FileStore.Save(HttpContext.Current.Server.MapPath(p), raw);
+        }
+
+        private static string getPath<T>(string ID)
+        {
+            Type myType = typeof(T);
+            string p = string.Format("{0}/{1}/{2}{3}", path, myType.Name, ID, fileExtension);
+
+            return p;
         }
     }
 }
