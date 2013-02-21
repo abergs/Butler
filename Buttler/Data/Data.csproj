@@ -37,8 +37,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtlerDocument.cs" />
-    <Compile Include="ButtlerDocumentMeta.cs" />
+    <Compile Include="ButlerDocument.cs" />
     <Compile Include="FileStore.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

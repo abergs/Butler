@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Buttler
+namespace Butler
 {
     public class Store
     {
-        private static readonly string path = "~/App_Data/Buttler";
+        private static readonly string path = "~/App_Data/Butler";
         private static readonly string fileExtension = ".json";
 
         public static T Get<T>(string ID) where T : new()

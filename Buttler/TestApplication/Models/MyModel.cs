@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TestApplication.Models
 {
-    public class MyModel : Buttler.ButtlerDocument
+    public class MyModel : Butler.ButlerDocument
     {
         public string Title { get; set; }
         public string Content { get; set; }

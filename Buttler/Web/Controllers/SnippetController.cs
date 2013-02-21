@@ -23,7 +23,7 @@ namespace Web.Controllers
 
         [HttpPost]
         public ActionResult Create(Web.Models.Snippet s) {
-            Buttler.Store.Save(s);
+            Butler.Store.Save(s);
             return View();
         }
 

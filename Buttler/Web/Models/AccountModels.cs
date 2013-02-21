@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Buttler;
+using Butler;
 
 namespace Web.Models
 {
@@ -16,7 +16,7 @@ namespace Web.Models
     {
         public Authorization()
         {
-            data = Store.Get<Data>("Buttler.Meta.Authorization");
+            data = Store.Get<Data>("Butler.Meta.Authorization");
 
             if (data == null)
             {
@@ -56,14 +56,14 @@ namespace Web.Models
             Store.Save(data);
         }
 
-        private class Data : ButtlerDocument
+        private class Data : ButlerDocument
         {
             public Data()
             {
                 Users = new List<User>();
             }
 
-            public override string ID { get { return "Buttler.Meta.Authorization"; } set {} }
+            public override string ID { get { return "Butler.Meta.Authorization"; } set {} }
             public List<User> Users { get; set; }
         }
     }

@@ -19,10 +19,10 @@ namespace TestApplication.Controllers
             model.Content = "Hello World!!";
             model.Title = "Welcome!";
 
-            Buttler.Store.Save(model);
+            Butler.Store.Save(model);
 
 
-            Models.MyModel retrieved = Buttler.Store.Get<Models.MyModel>("welcome");
+            Models.MyModel retrieved = Butler.Store.Get<Models.MyModel>("welcome");
 
             return View(retrieved);
         }

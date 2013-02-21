@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Buttler
+namespace Butler
 {
-    public abstract class ButtlerDocument
+    public abstract class ButlerDocument
     {
         public abstract string ID { get; set; }
-        //public abstract ButtlerDocument() { }
     }
 }
