@@ -7,7 +7,7 @@ namespace Buttler
 {
     public abstract class ButtlerDocument
     {
-        public abstract string ID { get;}
+        public abstract string ID { get; set; }
 
     }
 }

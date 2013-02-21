@@ -21,6 +21,7 @@ namespace Web.Models
             if (data == null)
             {
                 data = new Data();
+                Store.Save(data);
             }
         }
 
@@ -62,9 +63,8 @@ namespace Web.Models
                 Users = new List<User>();
             }
 
-            public override string ID { get { return "Buttler.Meta.Authorization"; } }
+            public override string ID { get { return "Buttler.Meta.Authorization"; } set {} }
             public List<User> Users { get; set; }
         }
-
     }
 }

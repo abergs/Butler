@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Index";
+    var m = Buttler.Store.Get<Web.Models.Snippet>("welcome");
+    }
+
+<h2>Index</h2>
+@m.ID;
+@m.Title;
