@@ -21,6 +21,9 @@ namespace Web.Controllers
         }
 
         public ActionResult Login() {
+            if (User.Identity.IsAuthenticated) {
+                return RedirectToAction("Index", "Snippet");
+            }
             return View(); 
         }
 
@@ -39,10 +42,17 @@ namespace Web.Controllers
 
             if (valid) {
                 // Create session
-                FormsAuthentication.SetAuthCookie(user.email, false);                
+                FormsAuthentication.SetAuthCookie(user.email, false);
+                return RedirectToAction("Index", "Snippet");
             }
   
             return View();
+        }
+
+        public ActionResult Logout() {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Login");
         }
 
         public ActionResult Create() {

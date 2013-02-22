@@ -34,14 +34,15 @@ namespace Butler
             }
         }
 
-        public static List<T> GetAll<T>() {
-            var raws = FileStore.ReadAll(getPath<T>(""));
-            var result = new List<T>();
-            raws.ForEach(raw => {
-                result.Add(JsonSerializer.Parse<T>(raw));
-            });
-
-            return result;
+        public static List<T> GetAll<T>() where T : new() {
+            try
+            {
+                return GetModels<T>();
+            }
+            catch (Exception)
+            {
+                return new List<T>();
+            }
         }
 
         private static T GetModel<T>(string ID)
@@ -49,6 +50,17 @@ namespace Butler
             var p = getPath<T>(ID);
             var raw = FileStore.Read(p);
             return (T)JsonSerializer.Parse<T>(raw);
+        }
+
+        private static List<T> GetModels<T>() {
+            var raws = FileStore.ReadAll(getPath<T>(""));
+            var result = new List<T>();
+            raws.ForEach(raw =>
+            {
+                result.Add(JsonSerializer.Parse<T>(raw));
+            });
+
+            return result;
         }
 
         public static void Save<T>(T model)

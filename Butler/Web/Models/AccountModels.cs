@@ -38,7 +38,6 @@ namespace Web.Models
         public void AddUser(User user)
         {
             // Validate
-
             foreach (var u in data.Users)
             {
                 if (u.email == user.email)

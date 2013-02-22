@@ -16,18 +16,19 @@ namespace Web.Controllers
         {
             List<Web.Models.Snippet> snippets = Butler.Store.GetAll<Web.Models.Snippet>();
 
-            return View();
+            return View(snippets);
         }
 
-        public ActionResult Create() {
-            var s = new Web.Models.Snippet();
-            return View(s);
+        public ActionResult Edit(string id) {
+            var snip = Butler.Store.Get<Web.Models.Snippet>(id);
+            return View(snip);
         }
 
         [HttpPost]
-        public ActionResult Create(Web.Models.Snippet s) {
+        public ActionResult Edit(Web.Models.Snippet s) {
             Butler.Store.Save(s);
-            return View();
+            ViewBag.Saved = true;
+            return View(s);
         }
 
     }

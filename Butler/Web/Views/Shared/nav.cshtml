@@ -1,0 +1,18 @@
+﻿<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Butler</a>
+            <ul class="nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a href="@Url.Action("Index","Snippet")">Innehåll</a></li>
+                    <li><a href="@Url.Action("Logout","Account")">Logga ut</a></li>
+                }
+                else
+                {
+                    <li class="active"><a href="#">Login</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

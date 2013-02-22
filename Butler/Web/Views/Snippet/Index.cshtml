@@ -1,8 +1,17 @@
-﻿@{
+﻿@model List<Web.Models.Snippet>
+@{
     ViewBag.Title = "Index";
-    var m = Butler.Store.Get<Web.Models.Snippet>("welcome");
     }
 
-<h2>Index</h2>
-@m.ID;
-@m.Title;
+<h2>Snippets</h2>
+<a href="@Url.Action("Edit")" class="btn">Skapa nytt innehåll</a>
+
+@foreach (var snip in Model)
+{
+<div>
+    <h6>@snip.ID</h6>
+    <h5>@snip.Title</h5>
+    <p>@snip.Content</p>
+    <a href="@Url.Action("Edit", "Snippet", new { id = @snip.ID })" class="btn">Ändra</a>
+</div>    
+}
