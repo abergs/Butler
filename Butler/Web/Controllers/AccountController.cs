@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Web.Models;
 
 namespace Web.Controllers
@@ -29,21 +30,18 @@ namespace Web.Controllers
             var valid = false;
             foreach (var storedUser in auth.Users)
             {
-                if (user.email == storedUser.email) {
-                    
+                if (user.email == storedUser.email) {                    
                     // Validate password
-                    if (user.password == storedUser.password) {
-                        valid = true;
-                        break;
-                    }
+                    valid = BCrypt.Net.BCrypt.Verify(user.password, storedUser.password);
+                    break;
                 }
             }
 
             if (valid) {
-                // Create sesstion
-                
+                // Create session
+                FormsAuthentication.SetAuthCookie(user.email, false);                
             }
-
+  
             return View();
         }
 

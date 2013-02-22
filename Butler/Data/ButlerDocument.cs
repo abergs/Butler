@@ -7,6 +7,6 @@ namespace Butler
 {
     public abstract class ButlerDocument
     {
-        public abstract string ID { get; set; }
+        public abstract string ID { get; set; } 
     }
 }

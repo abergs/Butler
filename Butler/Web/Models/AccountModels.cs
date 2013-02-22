@@ -47,6 +47,9 @@ namespace Web.Models
                 }
             }
 
+            // hash password
+            user.password = BCrypt.Net.BCrypt.HashPassword(user.password,9);
+
             data.Users.Add(user);
             Save();
         }
