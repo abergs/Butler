@@ -10,6 +10,7 @@ namespace Web.Models
     {
         public string email { get; set; }
         public string password { get; set; }
+        public List<string> Roles { get; set; }
     }
 
     public class Authorization

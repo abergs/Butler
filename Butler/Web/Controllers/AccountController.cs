@@ -43,6 +43,9 @@ namespace Web.Controllers
             if (valid) {
                 // Create session
                 FormsAuthentication.SetAuthCookie(user.email, false);
+                
+                // Roles?
+                // Customer roleprovider?
                 return RedirectToAction("Index", "Snippet");
             }
   
