@@ -5,8 +5,10 @@
 <h2>Login</h2>
 @using (Html.BeginForm())
 {
-@Html.Editor("Email");
-                     @Html.Editor("Password");
-
-    <input class="t-button" type="submit" value="Login" />
+    <label>E-postadress</label>
+    @Html.Editor("Email");
+    <label>Lösenord</label>
+    @Html.Password("Password");
+    <br />
+    <input class="btn btn-primary btn-large" type="submit" value="Login" />
 }

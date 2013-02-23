@@ -2,13 +2,14 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Ändra</h2>
 @using (Html.BeginForm())
 {
-@Html.EditorForModel()
+    @Html.EditorForModel()
 
-    <input class="btn" type="submit" value="Save" />
-    if (ViewBag.saved != null) {
+    <input class="btn btn-primary btn-large" type="submit" value="Spara" />
+    <a href="@Url.Action("Index")">Avbryt</a>
+}
+@if (ViewBag.saved != null) {
         <div class="alert alert-success">Ändringarna är sparade</div>
-    }
 }

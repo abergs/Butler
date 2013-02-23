@@ -2,6 +2,14 @@
   font-size: .85em;
   font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
   color: #232323;
-  background-color: #fff;
+  background-color: #f1f1f1;
   padding-top: 50px;
+}
+.document-box {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+.document-list {
+  margin-top: 20px;
 }
