@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace Web2
+namespace ButlerWeb
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -23,7 +23,7 @@ namespace Web2
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            ControllerBuilder.Current.SetControllerFactory(new Web2.Controllers.ControllerFactory());
+            ControllerBuilder.Current.SetControllerFactory(new ButlerWeb.Areas.Butler.Controllers.ControllerFactory());
         }
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{0E6D102F-0E77-4496-9F24-A5FF0832D816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Data\Core.csproj", "{8FEAE930-1A93-427F-BB76-927528DAA2C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerCore", "Data\ButlerCore.csproj", "{8FEAE930-1A93-427F-BB76-927528DAA2C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}"
 EndProject
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0F7BEC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web2", "Web2\Web2.csproj", "{D0021CBA-C862-41D7-A9F8-FE667396CBA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerWeb", "Web2\ButlerWeb.csproj", "{D0021CBA-C862-41D7-A9F8-FE667396CBA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

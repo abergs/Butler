@@ -252,9 +252,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Core.csproj">
+    <ProjectReference Include="..\Data\ButlerCore.csproj">
       <Project>{8feae930-1a93-427f-bb76-927528daa2c2}</Project>
-      <Name>Core</Name>
+      <Name>ButlerCore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

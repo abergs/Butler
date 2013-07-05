@@ -4,10 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Web2.Models;
-using Web2.Controllers;
+using ButlerWeb.Models;
 
-namespace Web2.Controllers
+namespace ButlerWeb.Areas.Butler.Controllers
 {
     public class ControllerFactory : DefaultControllerFactory
     {
@@ -25,10 +24,8 @@ namespace Web2.Controllers
                 string controllers = "Controllers";
                 string GenericController = "MyController";
                 Type type = Type.GetType(string.Format("{0}.{1}.{2}", rootspace, models, controllerName));
-
-                string mycontroller = string.Format("{0}.{1}.{2}", rootspace, controllers, GenericController);
-                Type rootControllerType = typeof(MyController<>);
-
+                
+                Type rootControllerType = typeof(GenericController<>);
                 Type controllerType = rootControllerType.MakeGenericType(type);
                 return Activator.CreateInstance(controllerType) as IController;
             }

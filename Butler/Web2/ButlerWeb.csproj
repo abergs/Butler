@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Web2</RootNamespace>
-    <AssemblyName>Web2</AssemblyName>
+    <RootNamespace>ButlerWeb</RootNamespace>
+    <AssemblyName>ButlerWeb</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -128,73 +128,74 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ControllerFactory.cs" />
-    <Compile Include="Controllers\MyController.cs" />
+    <Compile Include="Areas\Butler\ButlerAreaRegistration.cs" />
+    <Compile Include="Areas\Butler\Controllers\GenericController.cs" />
+    <Compile Include="Areas\Butler\Controllers\ControllerFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\Snippet.cs" />
+    <Compile Include="Areas\Butler\Models\Image.cs" />
+    <Compile Include="Areas\Butler\Models\Snippet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery-ui.css" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery-ui.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Areas\Butler\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Areas\Butler\Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Areas\Butler\Content\Site.css" />
+    <Content Include="Areas\Butler\Views\Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -219,26 +220,27 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\Login.cshtml" />
-    <Content Include="Views\Shared\Index.cshtml" />
-    <Content Include="Views\Shared\Edit.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Snippet.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Snippet.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Image.cshtml" />
+    <Content Include="Areas\Butler\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\Login.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\Index.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\Edit.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\EditorTemplates\Snippet.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\DisplayTemplates\Snippet.cshtml" />
+    <Content Include="Areas\Butler\Views\Shared\DisplayTemplates\Image.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Core.csproj">
+    <ProjectReference Include="..\Data\ButlerCore.csproj">
       <Project>{8feae930-1a93-427f-bb76-927528daa2c2}</Project>
-      <Name>Core</Name>
+      <Name>ButlerCore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

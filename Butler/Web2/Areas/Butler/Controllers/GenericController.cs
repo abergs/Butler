@@ -4,30 +4,30 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Web2.Controllers
+namespace ButlerWeb.Areas.Butler.Controllers
 {
-    public class MyController<T> : Controller where T : new()
+    public class GenericController<T> : Controller where T : new()
     {
         //
         // GET: /My/
 
         public ActionResult Index()
         {
-            List<T> entities = Butler.Store.GetAll<T>();
+            List<T> entities = ButlerCore.Store.GetAll<T>();
 
             return View(entities);
         }
 
         public ActionResult Edit(string id)
         {
-            var entity = Butler.Store.Get<T>(id);
+            var entity = ButlerCore.Store.Get<T>(id);
             return View(entity);
         }
 
         [HttpPost]
         public ActionResult Edit(T entity)
         {
-            Butler.Store.Save(entity);
+            ButlerCore.Store.Save(entity);
             ViewBag.Saved = true;
             return View(entity);
         }
