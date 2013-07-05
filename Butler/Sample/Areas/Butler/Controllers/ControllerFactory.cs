@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using ButlerWeb.Models;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
@@ -19,7 +18,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
             }
             catch (Exception)
             {
-                string rootspace = "Web2";
+                string rootspace = "Sample";
                 string models = "Models";
                 Type type = Type.GetType(string.Format("{0}.{1}.{2}", rootspace, models, controllerName));
                 
