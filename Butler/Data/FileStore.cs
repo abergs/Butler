@@ -26,14 +26,30 @@ namespace Butler
             return File.ReadAllText(path);
         }
 
-        public static List<string> ReadAll(string path) {
+        public static List<string> ReadAll(string path)
+        {
             path = cleanPath(path);
             string[] filePaths = Directory.GetFiles(path);
             List<String> files = new List<string>();
 
             foreach (string filePath in filePaths)
             {
-                files.Add(Read(filePath));             
+                files.Add(Read(filePath));
+            }
+
+            var pathz = "asdasd";
+            string[] filePathsz = Directory.GetFiles(path);
+
+            var searchWord = "hello";
+
+            foreach (string filePath in filePaths)
+            {
+                // remove extension
+                var file = Path.GetFileNameWithoutExtension(filePath);
+                if (file.Contains(searchWord))
+                {
+                    // found it
+                }
             }
 
             return files;

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Butler
+namespace Web2.Models
 {
-    public abstract class ButlerDocument
+    public class Image : Butler.ButlerDocument
     {
-        public string ID { get; set; } 
     }
 }

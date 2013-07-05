@@ -8,6 +8,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         //
@@ -15,11 +16,7 @@ namespace Web.Controllers
 
         Authorization auth = new Authorization();
 
-        public ActionResult Index()
-        {
-            return View(new User());
-        }
-
+        [AllowAnonymous]
         public ActionResult Login() {
             if (User.Identity.IsAuthenticated) {
                 return RedirectToAction("Index", "Snippet");
@@ -28,6 +25,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult Login(User user) {
 
             var valid = false;
@@ -58,13 +56,16 @@ namespace Web.Controllers
             return RedirectToAction("Login");
         }
 
-        public ActionResult Create() {
-            var model = new User();
-            return View(model);
+        [HttpGet]
+        public ActionResult Edit() {
+            //if (user == null) {
+               var user = new User();
+            //}
+            return View(user);
         }
 
         [HttpPost]
-        public ActionResult Create(User newUser) {
+        public ActionResult Edit(User newUser) {
 
             auth.AddUser(newUser);
             
