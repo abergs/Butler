@@ -1,12 +1,12 @@
-﻿@model IEnumerable<dynamic>
+﻿@model GenericControllerModel<dynamic>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-My model: @Model
+<h2>@Model.Name</h2>
+<a href="@Url.Action("Edit")">New</a>
 
-@foreach (var entity in Model)
+@foreach (var entity in Model.Entities)
 {
      @Html.DisplayFor(e => entity)
 }

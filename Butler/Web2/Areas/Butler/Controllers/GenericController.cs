@@ -14,8 +14,11 @@ namespace ButlerWeb.Areas.Butler.Controllers
         public ActionResult Index()
         {
             List<T> entities = ButlerCore.Store.GetAll<T>();
+            var model = new GenericControllerModel<T>();
+            model.Name = Helpers.Attributes.GetName(typeof(T));
+            model.Entities = entities;
 
-            return View(entities);
+            return View(model);
         }
 
         public ActionResult Edit(string id)

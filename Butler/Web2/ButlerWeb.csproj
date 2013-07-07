@@ -154,7 +154,9 @@
     <Compile Include="Areas\Butler\Controllers\SetupController.cs" />
     <Compile Include="Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
     <Compile Include="Areas\Butler\Controllers\WelcomeController.cs" />
+    <Compile Include="Areas\Butler\Helpers\Attributes.cs" />
     <Compile Include="Areas\Butler\Models\AccountModels.cs" />
+    <Compile Include="Areas\Butler\Models\GenericControllerModel.cs" />
     <Compile Include="Areas\Butler\Models\DocumentTypeWrapper.cs" />
     <Compile Include="Areas\Butler\Models\WelcomeViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -170,23 +172,6 @@
     <Content Include="Areas\Butler\Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
-    <Content Include="Scripts\foundation\foundation.alerts.js" />
-    <Content Include="Scripts\foundation\foundation.clearing.js" />
-    <Content Include="Scripts\foundation\foundation.cookie.js" />
-    <Content Include="Scripts\foundation\foundation.dropdown.js" />
-    <Content Include="Scripts\foundation\foundation.forms.js" />
-    <Content Include="Scripts\foundation\foundation.interchange.js" />
-    <Content Include="Scripts\foundation\foundation.joyride.js" />
-    <Content Include="Scripts\foundation\foundation.js" />
-    <Content Include="Scripts\foundation\foundation.magellan.js" />
-    <Content Include="Scripts\foundation\foundation.orbit.js" />
-    <Content Include="Scripts\foundation\foundation.placeholder.js" />
-    <Content Include="Scripts\foundation\foundation.reveal.js" />
-    <Content Include="Scripts\foundation\foundation.section.js" />
-    <Content Include="Scripts\foundation\foundation.tooltips.js" />
-    <Content Include="Scripts\foundation\foundation.topbar.js" />
-    <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\zepto.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -202,7 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="sass\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -341,9 +325,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Butler\Content\_foundation.mvc.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Foundation_Index.cshtml" />

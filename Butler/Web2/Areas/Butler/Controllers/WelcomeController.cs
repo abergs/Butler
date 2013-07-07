@@ -23,25 +23,12 @@ namespace ButlerWeb.Areas.Butler.Controllers
             vm.Types = subtypes;
             foreach (var type in vm.Types)
             {
-                type.Name = GetName(type.Type).ToString();
+                type.Name = Helpers.Attributes.GetName(type.Type);
             }
 
             return View(vm);
         }
 
-        private string GetName(Type type)
-        {
-            System.Attribute[] attrs = System.Attribute.GetCustomAttributes(type);  // Reflection
-            foreach (System.Attribute attr in attrs)
-            {
-                if (attr is DisplayNameAttribute)
-                {
-                    DisplayNameAttribute a = (DisplayNameAttribute)attr;
-                    return a.DisplayName;
-                }
-            }
-
-            return type.Name;
-        }
+       
     }
 }
