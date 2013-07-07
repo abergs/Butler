@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-    <system.web>
-		<authentication mode="Forms">
-		  <forms loginUrl="~/Butler/Account/Login" timeout="2880" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
-		</authentication>
-    </system.web>
+<configuration>
+  <system.web>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Butler/Account/Login" timeout="2880" />
+    </authentication>
+  </system.web>
 </configuration>
