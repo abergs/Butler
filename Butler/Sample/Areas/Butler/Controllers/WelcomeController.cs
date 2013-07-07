@@ -16,7 +16,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
         public ActionResult Index()
         {
             var targetAssembly = Assembly.GetExecutingAssembly(); // or whichever
-            var subtypes = targetAssembly.GetTypes().Where(t => t.IsSubclassOf(typeof(ButlerCore.ButlerDocument))).Select(t => new DocumentTypeWrapper(t)).ToList();
+            var subtypes = targetAssembly.GetTypes().Where(t => t.IsSubclassOf(typeof(ButlerCore.ButlerDocument)) && t.IsPublic).Select(t => new DocumentTypeWrapper(t)).ToList();
 
             var vm = new WelcomeViewModel();
             vm.Types = subtypes;

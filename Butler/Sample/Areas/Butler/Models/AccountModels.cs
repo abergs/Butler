@@ -58,7 +58,7 @@ namespace ButlerWeb.Areas.Butler.Models
         {
             Store.Save(data);
         }
-
+        
         private class ButlerAuthorization : ButlerDocument
         {
             public ButlerAuthorization()
