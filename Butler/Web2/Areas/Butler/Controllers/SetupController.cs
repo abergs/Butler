@@ -16,14 +16,16 @@ namespace ButlerWeb.Areas.Butler.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View("../Account/Create", new User());
         }
 
 
         [HttpPost]
         public ActionResult Index(User user)
         {
-            return View();
+            var auth = new Authorization();
+            auth.AddUser(user);
+            return RedirectToAction("Login", "Account");
         }
 
 

@@ -49,7 +49,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
                 
                 // Roles?
                 // Customer roleprovider?
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Welcome");
             }
   
             return View();

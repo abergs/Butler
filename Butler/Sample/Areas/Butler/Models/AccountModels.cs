@@ -17,11 +17,11 @@ namespace ButlerWeb.Areas.Butler.Models
     {
         public Authorization()
         {
-            data = Store.Get<Data>("Butler.Meta.Authorization");
+            data = Store.Get<ButlerAuthorization>("Authorization");
 
             if (data == null)
             {
-                data = new Data();
+                data = new ButlerAuthorization();
                 Store.Save(data);
             }
         }
@@ -34,7 +34,7 @@ namespace ButlerWeb.Areas.Butler.Models
             }
         }
 
-        private Data data;
+        private ButlerAuthorization data;
 
         public void AddUser(User user)
         {
@@ -59,12 +59,12 @@ namespace ButlerWeb.Areas.Butler.Models
             Store.Save(data);
         }
 
-        private class Data : ButlerDocument
+        private class ButlerAuthorization : ButlerDocument
         {
-            public Data()
+            public ButlerAuthorization()
             {
                 Users = new List<User>();
-                this.ID = "Butler.Meta.Authorization";
+                this.ID = "Authorization";
             }
 
             public List<User> Users { get; set; }

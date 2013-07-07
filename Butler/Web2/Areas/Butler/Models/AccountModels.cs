@@ -8,8 +8,9 @@ namespace ButlerWeb.Areas.Butler.Models
 {
     public class User
     {
-        public string email { get; set; }
-        public string password { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public List<string> Roles { get; set; }
     }
 
@@ -17,11 +18,11 @@ namespace ButlerWeb.Areas.Butler.Models
     {
         public Authorization()
         {
-            data = Store.Get<Data>("Butler.Meta.Authorization");
+            data = Store.Get<ButlerAuthorization>("Authorization");
 
             if (data == null)
             {
-                data = new Data();
+                data = new ButlerAuthorization();
                 Store.Save(data);
             }
         }
@@ -34,21 +35,21 @@ namespace ButlerWeb.Areas.Butler.Models
             }
         }
 
-        private Data data;
+        private ButlerAuthorization data;
 
         public void AddUser(User user)
         {
             // Validate
             foreach (var u in data.Users)
             {
-                if (u.email == user.email)
+                if (u.Email == user.Email)
                 {
                     throw new Exception("User already exist");
                 }
             }
 
             // hash password
-            user.password = BCrypt.Net.BCrypt.HashPassword(user.password,9);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password,9);
 
             data.Users.Add(user);
             Save();
@@ -59,12 +60,12 @@ namespace ButlerWeb.Areas.Butler.Models
             Store.Save(data);
         }
 
-        private class Data : ButlerDocument
+        private class ButlerAuthorization : ButlerDocument
         {
-            public Data()
+            public ButlerAuthorization()
             {
                 Users = new List<User>();
-                this.ID = "Butler.Meta.Authorization";
+                this.ID = "Authorization";
             }
 
             public List<User> Users { get; set; }
