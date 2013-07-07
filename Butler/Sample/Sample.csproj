@@ -155,7 +155,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\Site.css" />
+    <Content Include="Areas\Butler\Content\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -212,6 +214,46 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Areas\Butler\Content\_foundation.mvc.scss" />
+    <Content Include="Areas\Butler\Content\_foundation.scss" />
+    <Content Include="Areas\Butler\Content\_normalize.scss" />
+    <Content Include="Areas\Butler\Content\foundation\_variables.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_alert-boxes.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_block-grid.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_breadcrumbs.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_button-groups.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_buttons.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_clearing.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_custom-forms.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_dropdown-buttons.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_dropdown.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_flex-video.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_forms.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_global.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_grid.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_inline-lists.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_joyride.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_keystrokes.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_labels.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_magellan.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_orbit.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_pagination.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_panels.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_pricing-tables.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_progress-bars.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_reveal.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_section.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_side-nav.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_split-buttons.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_sub-nav.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_switch.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_tables.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_thumbs.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_tooltips.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_top-bar.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_type.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_visibility.scss" />
+    <Content Include="Areas\Butler\Content\Site.scss" />
     <Content Include="Areas\Butler\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Butler\Views\Account\Create.cshtml" />
     <Content Include="Areas\Butler\Views\Account\Login.cshtml" />
