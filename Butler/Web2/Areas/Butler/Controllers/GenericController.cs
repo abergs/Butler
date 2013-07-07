@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
-    public class GenericController<T> : Controller where T : new()
+    public class GenericController<T> : Controller where T : ButlerCore.ButlerDocument, new()
     {
         //
         // GET: /My/
@@ -14,9 +14,9 @@ namespace ButlerWeb.Areas.Butler.Controllers
         public ActionResult Index()
         {
             List<T> entities = ButlerCore.Store.GetAll<T>();
-            var model = new GenericControllerModel<T>();
+            var model = new GenericControllerModel();
             model.Name = Helpers.Attributes.GetName(typeof(T));
-            model.Entities = entities;
+            model.Entities = entities.Cast<dynamic>().ToList();
 
             return View(model);
         }
