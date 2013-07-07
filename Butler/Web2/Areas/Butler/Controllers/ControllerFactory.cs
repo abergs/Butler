@@ -18,7 +18,8 @@ namespace ButlerWeb.Areas.Butler.Controllers
             }
             catch (Exception ex)
             {
-                if (requestContext.RouteData.DataTokens["area"].ToString().ToLowerInvariant() == "butler")
+                var area = requestContext.RouteData.DataTokens["area"];
+                if (area != null && area.ToString().ToLowerInvariant() == "butler")
                 {
                     string rootspace = "ButlerWeb";
                     string models = "Models";
