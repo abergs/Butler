@@ -17,7 +17,8 @@ namespace ButlerWeb.Areas.Butler
             context.MapRoute(
                 "Butler_default",
                 "Butler/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new[] {"ButlerWeb.Areas.Butler.Controllers"}
             );
         }
     }

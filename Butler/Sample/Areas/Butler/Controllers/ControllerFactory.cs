@@ -16,15 +16,22 @@ namespace ButlerWeb.Areas.Butler.Controllers
                 var controll = base.CreateController(requestContext, controllerName);
                 return controll;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                string rootspace = "Sample";
-                string models = "Models";
-                Type type = Type.GetType(string.Format("{0}.{1}.{2}", rootspace, models, controllerName));
-                
-                Type rootControllerType = typeof(GenericController<>);
-                Type controllerType = rootControllerType.MakeGenericType(type);
-                return Activator.CreateInstance(controllerType) as IController;
+                if (requestContext.RouteData.DataTokens["area"].ToString().ToLowerInvariant() == "butler")
+                {
+                    string rootspace = "Sample";
+                    string models = "Models";
+                    Type type = Type.GetType(string.Format("{0}.{1}.{2}", rootspace, models, controllerName));
+
+                    Type rootControllerType = typeof(GenericController<>);
+                    Type controllerType = rootControllerType.MakeGenericType(type);
+                    return Activator.CreateInstance(controllerType) as IController;
+                }
+                else
+                {
+                    throw ex;
+                }
             }
         }
     }

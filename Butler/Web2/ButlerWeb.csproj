@@ -41,6 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net">
+      <HintPath>..\packages\BCrypt-Official.0.1.107\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="ButlerCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ButlerCore.1.0.1\lib\ButlerCore.dll</HintPath>
@@ -145,9 +148,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Butler\ButlerAreaRegistration.cs" />
+    <Compile Include="Areas\Butler\Controllers\AccountController.cs" />
     <Compile Include="Areas\Butler\Controllers\GenericController.cs" />
     <Compile Include="Areas\Butler\Controllers\ControllerFactory.cs" />
+    <Compile Include="Areas\Butler\Controllers\SetupController.cs" />
+    <Compile Include="Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
     <Compile Include="Areas\Butler\Controllers\WelcomeController.cs" />
+    <Compile Include="Areas\Butler\Models\AccountModels.cs" />
     <Compile Include="Areas\Butler\Models\DocumentTypeWrapper.cs" />
     <Compile Include="Areas\Butler\Models\WelcomeViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +166,7 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\Butler\Content\Site.css" />
     <Content Include="Areas\Butler\Views\Web.config" />
+    <Content Include="LICENSE.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -180,6 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Butler\Views\Welcome\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Account\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Account\Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
