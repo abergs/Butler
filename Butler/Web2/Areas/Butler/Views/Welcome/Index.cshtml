@@ -1,4 +1,5 @@
 ﻿@model ButlerWeb.Areas.Butler.Models.WelcomeViewModel
+
 @{
     ViewBag.Title = "Index";
 }
@@ -7,6 +8,7 @@
 
 @foreach (var docType in Model.Types)
 {
-    @docType.Type.ToString()
-    <a href="@Url.Action("Index",docType.Type.Name)">Manage</a>
+
+    <h4>@docType.Name</h4>
+    <a href="@Url.Action("Index", docType.Type.Name)">Manage</a>
 }
