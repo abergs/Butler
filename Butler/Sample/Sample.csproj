@@ -215,6 +215,7 @@
     <Content Include="Areas\Butler\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Butler\Views\Account\Create.cshtml" />
     <Content Include="Areas\Butler\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Butler\Views\Setup\Index.cshtml" />
     <Content Include="Areas\Butler\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Butler\Views\Shared\Edit.cshtml" />
     <Content Include="Areas\Butler\Views\Shared\Error.cshtml" />

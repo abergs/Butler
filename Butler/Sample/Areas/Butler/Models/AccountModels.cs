@@ -8,8 +8,9 @@ namespace ButlerWeb.Areas.Butler.Models
 {
     public class User
     {
-        public string email { get; set; }
-        public string password { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public List<string> Roles { get; set; }
     }
 
@@ -41,14 +42,14 @@ namespace ButlerWeb.Areas.Butler.Models
             // Validate
             foreach (var u in data.Users)
             {
-                if (u.email == user.email)
+                if (u.Email == user.Email)
                 {
                     throw new Exception("User already exist");
                 }
             }
 
             // hash password
-            user.password = BCrypt.Net.BCrypt.HashPassword(user.password,9);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password,9);
 
             data.Users.Add(user);
             Save();
@@ -58,7 +59,7 @@ namespace ButlerWeb.Areas.Butler.Models
         {
             Store.Save(data);
         }
-        
+
         private class ButlerAuthorization : ButlerDocument
         {
             public ButlerAuthorization()

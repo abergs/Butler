@@ -17,64 +17,78 @@ namespace ButlerWeb.Areas.Butler.Controllers
         Authorization auth = new Authorization();
 
         [AllowAnonymous]
-        public ActionResult Login() {
-            if (User.Identity.IsAuthenticated) {
+        public ActionResult Login()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
                 return RedirectToAction("Index", "Welcome");
             }
 
-            if (auth.Users.Count == 0) {
+            if (auth.Users.Count == 0)
+            {
                 return RedirectToAction("Index", "Setup");
             }
 
-            return View(); 
+            return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Login(User user) {
+        public ActionResult Login(UserViewModel user)
+        {
 
             var valid = false;
             foreach (var storedUser in auth.Users)
             {
-                if (user.email == storedUser.email) {                    
+                if (user.Username == storedUser.Email || user.Username == storedUser.Name)
+                {
                     // Validate password
-                    valid = BCrypt.Net.BCrypt.Verify(user.password, storedUser.password);
+                    valid = BCrypt.Net.BCrypt.Verify(user.Password, storedUser.Password);
                     break;
                 }
             }
 
-            if (valid) {
+            if (valid)
+            {
                 // Create session
-                FormsAuthentication.SetAuthCookie(user.email, false);
-                
+                FormsAuthentication.SetAuthCookie(user.Email, false);
+
                 // Roles?
                 // Customer roleprovider?
-                return RedirectToAction("Index","Welcome");
+                return RedirectToAction("Index", "Welcome");
             }
-  
+
             return View();
         }
 
-        public ActionResult Logout() {
+        public ActionResult Logout()
+        {
             FormsAuthentication.SignOut();
 
             return RedirectToAction("Login");
         }
 
         [HttpGet]
-        public ActionResult Edit() {
+        public ActionResult Edit()
+        {
             //if (user == null) {
-               var user = new User();
+            var user = new User();
             //}
             return View(user);
         }
 
         [HttpPost]
-        public ActionResult Edit(User newUser) {
+        public ActionResult Edit(User newUser)
+        {
 
             auth.AddUser(newUser);
-            
+
             return View();
+        }
+
+        public class UserViewModel : User
+        {
+            public string Username { get; set; }
         }
 
     }

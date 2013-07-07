@@ -12,5 +12,6 @@ namespace ButlerWeb.Areas.Butler.Models
             this.Type = type;
         }
         public Type Type { get; set; }
+        public string Name { get; set; }
     }
 }
