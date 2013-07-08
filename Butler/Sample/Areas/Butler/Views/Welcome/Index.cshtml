@@ -1,0 +1,23 @@
+﻿@model ButlerWeb.Areas.Butler.Models.WelcomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="large-12 columns">
+        <h2>Welcome</h2>
+
+        <ul class="large-block-grid-4">
+            <li>
+                @foreach (var docType in Model.Types)
+                {
+                    <a href="@Url.Action("Index", docType.Type.Name)" class="entityListItem">
+                        <h4>@docType.Name</h4>
+                        <p>Click to edit</p>
+                    </a>
+                }
+            </li>
+        </ul>
+    </div>
+</div>

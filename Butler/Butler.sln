@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{0E6D102F-0E77-4496-9F24-A5FF0832D816}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerCore", "Data\ButlerCore.csproj", "{8FEAE930-1A93-427F-BB76-927528DAA2C2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0F7BEC15-0D0D-4505-AF92-14D52218D7B7}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0F7BEC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerWeb", "Web2\ButlerWeb.csproj", "{D0021CBA-C862-41D7-A9F8-FE667396CBA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerWeb", "ButlerWeb\ButlerWeb.csproj", "{D0021CBA-C862-41D7-A9F8-FE667396CBA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{95413FC8-F5B9-4823-BCAA-69AB57D6F640}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{040E9944-8FFB-4B47-915C-8701C1D3E618}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,26 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E6D102F-0E77-4496-9F24-A5FF0832D816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E6D102F-0E77-4496-9F24-A5FF0832D816}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E6D102F-0E77-4496-9F24-A5FF0832D816}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E6D102F-0E77-4496-9F24-A5FF0832D816}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FEAE930-1A93-427F-BB76-927528DAA2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FEAE930-1A93-427F-BB76-927528DAA2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FEAE930-1A93-427F-BB76-927528DAA2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FEAE930-1A93-427F-BB76-927528DAA2C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6A8A6C2-F864-469E-B5FF-31B4A69B0C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0021CBA-C862-41D7-A9F8-FE667396CBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0021CBA-C862-41D7-A9F8-FE667396CBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0021CBA-C862-41D7-A9F8-FE667396CBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0021CBA-C862-41D7-A9F8-FE667396CBA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95413FC8-F5B9-4823-BCAA-69AB57D6F640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95413FC8-F5B9-4823-BCAA-69AB57D6F640}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95413FC8-F5B9-4823-BCAA-69AB57D6F640}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95413FC8-F5B9-4823-BCAA-69AB57D6F640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
