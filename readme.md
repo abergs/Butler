@@ -1,7 +1,7 @@
 #Butler - ~~World~~ Developer Class CMS
 Butler won't get in your way. Build your site as you want to, then add Butler as a drop-in Backend for your models.
 
-*Word of warning; Butler is in Alpha2 but is fully working, but very simple. Works on my machine guarantee issued :)*
+*Word of warning; Butler is in Alpha2, fully working, but primitive. Works on my machine guarantee issued :)*
 
 ## What is Butler?
 Butler is a pluginnable backend for your MVC4 site. After installing the Nuget Package, an area will be added at `yourapp.com/Butler/` where you and your users can login, and create/edit/store models for your application. You can then retrieve the model and present it as you wish inside your views.
