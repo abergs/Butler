@@ -1,14 +1,14 @@
-﻿using ButlerWeb.Areas.Butler.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
+using ButlerCore;
+using ButlerWeb.Areas.Butler.Helpers;
+using ButlerWeb.Areas.Butler.Models;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
+    [Authorize]
     public class WelcomeController : Controller
     {
         //
@@ -16,32 +16,21 @@ namespace ButlerWeb.Areas.Butler.Controllers
 
         public ActionResult Index()
         {
-            var targetAssembly = Assembly.GetExecutingAssembly(); // or whichever
-            var subtypes = targetAssembly.GetTypes().Where(t => t.IsSubclassOf(typeof(ButlerCore.ButlerDocument)) && t.IsPublic).Select(t => new DocumentTypeWrapper(t)).ToList();
+            Assembly targetAssembly = Assembly.GetExecutingAssembly(); // or whichever
+            List<DocumentTypeWrapper> subtypes =
+                targetAssembly.GetTypes()
+                              .Where(t => t.IsSubclassOf(typeof (ButlerDocument)) && t.IsPublic)
+                              .Select(t => new DocumentTypeWrapper(t))
+                              .ToList();
 
             var vm = new WelcomeViewModel();
             vm.Types = subtypes;
-            foreach (var type in vm.Types)
+            foreach (DocumentTypeWrapper type in vm.Types)
             {
-                type.Name = GetName(type.Type).ToString();
+                type.Name = Attributes.GetName(type.Type);
             }
 
             return View(vm);
-        }
-
-        private string GetName(Type type)
-        {
-            System.Attribute[] attrs = System.Attribute.GetCustomAttributes(type);  // Reflection
-            foreach (System.Attribute attr in attrs)
-            {
-                if (attr is DisplayNameAttribute)
-                {
-                    DisplayNameAttribute a = (DisplayNameAttribute)attr;
-                    return a.DisplayName;
-                }
-            }
-
-            return type.Name;
         }
     }
 }

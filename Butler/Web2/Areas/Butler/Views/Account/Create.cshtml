@@ -2,10 +2,14 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-@using (Html.BeginForm())
-{
-@Html.EditorForModel()
+<div class="row">
+    <div class="large-12 columns">
+        <h2>Create</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.EditorForModel()
 
-    <input class="t-button" type="submit" value="Save" />
-}
+            <input class="button" type="submit" value="Save" />
+        }
+    </div>
+</div>

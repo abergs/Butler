@@ -144,8 +144,10 @@
     <Compile Include="Areas\Butler\Controllers\GenericController.cs" />
     <Compile Include="Areas\Butler\Controllers\SetupController.cs" />
     <Compile Include="Areas\Butler\Controllers\WelcomeController.cs" />
+    <Compile Include="Areas\Butler\Helpers\Attributes.cs" />
     <Compile Include="Areas\Butler\Models\AccountModels.cs" />
     <Compile Include="Areas\Butler\Models\DocumentTypeWrapper.cs" />
+    <Compile Include="Areas\Butler\Models\GenericControllerModel.cs" />
     <Compile Include="Areas\Butler\Models\WelcomeViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -293,10 +295,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Page.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\xPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

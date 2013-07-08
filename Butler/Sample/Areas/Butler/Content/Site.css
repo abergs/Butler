@@ -4638,3 +4638,12 @@ a.th {
   -webkit-border-bottom-right-radius: 2px;
   border-bottom-right-radius: 2px; }
 
+.entityListItem {
+  color: #222222;
+  border: 1px solid #c9c9c9;
+  display: block;
+  padding: 10px; }
+  .entityListItem:hover {
+    box-shadow: 0px 0px 6px #2ba6cb;
+    border: 1px solid transparent; }
+
