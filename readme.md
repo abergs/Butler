@@ -36,7 +36,8 @@ Start your application, Head over to `/Butler`. Create a new MyEditablePageInfo.
 
 #### Fetch your Model in your Controller/view
 Now when you have stored data, you need to retrieve it in order to show it. This can be done in your controller (it can be done everywhere).
-    var info = ButlerCore.Store.Get<MyMvcApplication.Models.MyEditablePageInfo>("TheIDYouSpecifiedEarlier");
+	
+	var info = ButlerCore.Store.Get<MyMvcApplication.Models.MyEditablePageInfo>("TheIDYouSpecifiedEarlier");
 	ViewBag.MyInfo = info;
 	ViewBag.Title = info.Name;
 	
