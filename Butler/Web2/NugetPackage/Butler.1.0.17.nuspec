@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Butler</id>
+        <version>1.0.17</version>
+        <authors>Anders Åberg</authors>
+        <projectUrl>https://github.com/abergs/Butler</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Simple .NET CMS - Build your site as you wish, then add Butler to handle editable content. Read more in at the project Url.</description>
+        <tags>CMS, backend</tags>
+        <dependencies>
+            <dependency id="ButlerCore" version="1.0.1" />
+            <dependency id="BCrypt-Official" version="0.1.107" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Areas\Butler\Attributes\SetupOnlyAttribute.cs" target="content\Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
+        <file src="..\Areas\Butler\Content\foundation\components\_alert-boxes.scss" target="content\Areas\Butler\Content\foundation\components\_alert-boxes.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_block-grid.scss" target="content\Areas\Butler\Content\foundation\components\_block-grid.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_breadcrumbs.scss" target="content\Areas\Butler\Content\foundation\components\_breadcrumbs.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_button-groups.scss" target="content\Areas\Butler\Content\foundation\components\_button-groups.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_buttons.scss" target="content\Areas\Butler\Content\foundation\components\_buttons.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_clearing.scss" target="content\Areas\Butler\Content\foundation\components\_clearing.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_custom-forms.scss" target="content\Areas\Butler\Content\foundation\components\_custom-forms.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_dropdown-buttons.scss" target="content\Areas\Butler\Content\foundation\components\_dropdown-buttons.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_dropdown.scss" target="content\Areas\Butler\Content\foundation\components\_dropdown.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_flex-video.scss" target="content\Areas\Butler\Content\foundation\components\_flex-video.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_forms.scss" target="content\Areas\Butler\Content\foundation\components\_forms.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_global.scss" target="content\Areas\Butler\Content\foundation\components\_global.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_grid.scss" target="content\Areas\Butler\Content\foundation\components\_grid.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_inline-lists.scss" target="content\Areas\Butler\Content\foundation\components\_inline-lists.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_joyride.scss" target="content\Areas\Butler\Content\foundation\components\_joyride.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_keystrokes.scss" target="content\Areas\Butler\Content\foundation\components\_keystrokes.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_labels.scss" target="content\Areas\Butler\Content\foundation\components\_labels.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_magellan.scss" target="content\Areas\Butler\Content\foundation\components\_magellan.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_orbit.scss" target="content\Areas\Butler\Content\foundation\components\_orbit.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_pagination.scss" target="content\Areas\Butler\Content\foundation\components\_pagination.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_panels.scss" target="content\Areas\Butler\Content\foundation\components\_panels.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_pricing-tables.scss" target="content\Areas\Butler\Content\foundation\components\_pricing-tables.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_progress-bars.scss" target="content\Areas\Butler\Content\foundation\components\_progress-bars.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_reveal.scss" target="content\Areas\Butler\Content\foundation\components\_reveal.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_section.scss" target="content\Areas\Butler\Content\foundation\components\_section.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_side-nav.scss" target="content\Areas\Butler\Content\foundation\components\_side-nav.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_split-buttons.scss" target="content\Areas\Butler\Content\foundation\components\_split-buttons.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_sub-nav.scss" target="content\Areas\Butler\Content\foundation\components\_sub-nav.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_switch.scss" target="content\Areas\Butler\Content\foundation\components\_switch.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_tables.scss" target="content\Areas\Butler\Content\foundation\components\_tables.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_thumbs.scss" target="content\Areas\Butler\Content\foundation\components\_thumbs.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_tooltips.scss" target="content\Areas\Butler\Content\foundation\components\_tooltips.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_top-bar.scss" target="content\Areas\Butler\Content\foundation\components\_top-bar.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_type.scss" target="content\Areas\Butler\Content\foundation\components\_type.scss" />
+        <file src="..\Areas\Butler\Content\foundation\components\_visibility.scss" target="content\Areas\Butler\Content\foundation\components\_visibility.scss" />
+        <file src="..\Areas\Butler\Content\foundation\_variables.scss" target="content\Areas\Butler\Content\foundation\_variables.scss" />
+        <file src="..\Areas\Butler\Content\Site.css" target="content\Areas\Butler\Content\Site.css" />
+        <file src="..\Areas\Butler\Content\Site.scss" target="content\Areas\Butler\Content\Site.scss" />
+        <file src="..\Areas\Butler\Content\_foundation.mvc.scss" target="content\Areas\Butler\Content\_foundation.mvc.scss" />
+        <file src="..\Areas\Butler\Content\_foundation.scss" target="content\Areas\Butler\Content\_foundation.scss" />
+        <file src="..\Areas\Butler\Content\_normalize.scss" target="content\Areas\Butler\Content\_normalize.scss" />
+        <file src="..\Areas\Butler\Controllers\AccountController.cs" target="content\Areas\Butler\Controllers\AccountController.cs" />
+        <file src="..\Areas\Butler\Controllers\ControllerFactory.cs.pp" target="content\Areas\Butler\Controllers\ControllerFactory.cs.pp" />
+        <file src="..\Areas\Butler\Controllers\GenericController.cs" target="content\Areas\Butler\Controllers\GenericController.cs" />
+        <file src="..\Areas\Butler\Controllers\SetupController.cs" target="content\Areas\Butler\Controllers\SetupController.cs" />
+        <file src="..\Areas\Butler\Controllers\WelcomeController.cs" target="content\Areas\Butler\Controllers\WelcomeController.cs" />
+        <file src="..\Areas\Butler\Helpers\Attributes.cs" target="content\Areas\Butler\Helpers\Attributes.cs" />
+        <file src="..\Areas\Butler\Models\AccountModels.cs" target="content\Areas\Butler\Models\AccountModels.cs" />
+        <file src="..\Areas\Butler\Models\DocumentTypeWrapper.cs" target="content\Areas\Butler\Models\DocumentTypeWrapper.cs" />
+        <file src="..\Areas\Butler\Models\GenericControllerModel.cs" target="content\Areas\Butler\Models\GenericControllerModel.cs" />
+        <file src="..\Areas\Butler\Models\WelcomeViewModel.cs" target="content\Areas\Butler\Models\WelcomeViewModel.cs" />
+        <file src="..\Areas\Butler\Views\Account\Create.cshtml" target="content\Areas\Butler\Views\Account\Create.cshtml" />
+        <file src="..\Areas\Butler\Views\Account\Login.cshtml" target="content\Areas\Butler\Views\Account\Login.cshtml" />
+        <file src="..\Areas\Butler\Views\Setup\Index.cshtml" target="content\Areas\Butler\Views\Setup\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Edit.cshtml" target="content\Areas\Butler\Views\Shared\Edit.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Error.cshtml" target="content\Areas\Butler\Views\Shared\Error.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Index.cshtml" target="content\Areas\Butler\Views\Shared\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\_Layout.cshtml" target="content\Areas\Butler\Views\Shared\_Layout.cshtml" />
+        <file src="..\Areas\Butler\Views\Welcome\Index.cshtml" target="content\Areas\Butler\Views\Welcome\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Web.config" target="content\Areas\Butler\Views\Web.config" />
+        <file src="..\Areas\Butler\Views\_ViewStart.cshtml" target="content\Areas\Butler\Views\_ViewStart.cshtml" />
+        <file src="..\Areas\Butler\ButlerAreaRegistration.cs" target="content\Areas\Butler\ButlerAreaRegistration.cs" />
+        <file src="..\web.config.transform" target="content\web.config.transform" />
+    </files>
+</package>

@@ -3,11 +3,9 @@
     <metadata>
         <id>ButlerCore</id>
         <version>1.0.1</version>
-        <title />
-        <authors>Anders</authors>
-        <owners />
+        <authors>Anders Åberg</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>My package description.</description>
+        <description>ButlerCMS Core Library</description>
         <dependencies>
             <dependency id="Newtonsoft.Json" version="5.0.6" />
         </dependencies>
