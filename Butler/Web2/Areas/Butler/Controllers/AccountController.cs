@@ -1,10 +1,6 @@
-﻿using ButlerWeb.Areas.Butler.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
+using ButlerWeb.Areas.Butler.Models;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
@@ -14,7 +10,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
         //
         // GET: /Account/
 
-        Authorization auth = new Authorization();
+        private readonly Authorization _auth = new Authorization();
 
         [AllowAnonymous]
         public ActionResult Login()
@@ -24,7 +20,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
                 return RedirectToAction("Index", "Welcome");
             }
 
-            if (auth.Users.Count == 0)
+            if (_auth.Users.Count == 0)
             {
                 return RedirectToAction("Index", "Setup");
             }
@@ -36,9 +32,8 @@ namespace ButlerWeb.Areas.Butler.Controllers
         [AllowAnonymous]
         public ActionResult Login(UserViewModel user)
         {
-
-            var valid = false;
-            foreach (var storedUser in auth.Users)
+            bool valid = false;
+            foreach (User storedUser in _auth.Users)
             {
                 if (user.Username == storedUser.Email || user.Username == storedUser.Name)
                 {
@@ -80,8 +75,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
         [HttpPost]
         public ActionResult Edit(User newUser)
         {
-
-            auth.AddUser(newUser);
+            _auth.AddUser(newUser);
 
             return View();
         }
@@ -90,7 +84,5 @@ namespace ButlerWeb.Areas.Butler.Controllers
         {
             public string Username { get; set; }
         }
-
     }
 }
-
