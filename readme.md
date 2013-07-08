@@ -6,6 +6,8 @@ Butler won't get in your way. Build your site as you want to, then add Butler as
 ## What is Butler?
 Butler is a pluginnable backend for your MVC4 site. After installing the Nuget Package, an area will be added at `yourapp.com/Butler/` where you and your users can login, and create/edit/store models for your application. You can then retrieve the model and present it as you wish inside your views.
 
+`Install-Package Butler`
+
 ## No bullshit
 Butler won't get in your way. Create your site, then add Butler to enable content editing. You don't have to create templates or setup page structures. 
 
