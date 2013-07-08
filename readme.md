@@ -31,7 +31,13 @@ Here is an example:
 	}
 	
 Butler works with the models in your application, it will look for them in `YourApplication.Models`, this is everything you need to do in order to have the backend allow you to create and store that model.
-#### Done
-Start your application, Head over to `/Butler`.
+#### Create content
+Start your application, Head over to `/Butler`. Create a new MyEditablePageInfo. Butler will force you to enter an ID for this perticular `MyEditablePageInfo`. This ID will be used when fetching the data for presentation later.
+
+#### Fetch your Model in your Controller/view
+Now when you have stored data, you need to retrieve it in order to show it. This can be done in your controller (it can be done everywhere).
+    var info = ButlerCore.Store.Get<MyMvcApplication.Models.MyEditablePageInfo>("TheIDYouSpecifiedEarlier");
+	ViewBag.MyInfo = info;
+	ViewBag.Title = info.Name;
 
 
