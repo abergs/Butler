@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>ButlerWeb</id>
+        <version>1.0.6</version>
+        <authors>Anders</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>My package description.</description>
+        <dependencies>
+            <dependency id="ButlerCore" version="1.0.1" />
+            <dependency id="BCrypt-Official" version="0.1.107" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Areas\Butler\Attributes\SetupOnlyAttribute.cs" target="content\Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
+        <file src="..\Areas\Butler\Content\Site.css" target="content\Areas\Butler\Content\Site.css" />
+        <file src="..\Areas\Butler\Controllers\AccountController.cs" target="content\Areas\Butler\Controllers\AccountController.cs" />
+        <file src="..\Areas\Butler\Controllers\ControllerFactory.cs" target="content\Areas\Butler\Controllers\ControllerFactory.cs" />
+        <file src="..\Areas\Butler\Controllers\GenericController.cs" target="content\Areas\Butler\Controllers\GenericController.cs" />
+        <file src="..\Areas\Butler\Controllers\SetupController.cs" target="content\Areas\Butler\Controllers\SetupController.cs" />
+        <file src="..\Areas\Butler\Controllers\WelcomeController.cs" target="content\Areas\Butler\Controllers\WelcomeController.cs" />
+        <file src="..\Areas\Butler\Models\AccountModels.cs" target="content\Areas\Butler\Models\AccountModels.cs" />
+        <file src="..\Areas\Butler\Models\DocumentTypeWrapper.cs" target="content\Areas\Butler\Models\DocumentTypeWrapper.cs" />
+        <file src="..\Areas\Butler\Models\WelcomeViewModel.cs" target="content\Areas\Butler\Models\WelcomeViewModel.cs" />
+        <file src="..\Areas\Butler\Views\Account\Create.cshtml" target="content\Areas\Butler\Views\Account\Create.cshtml" />
+        <file src="..\Areas\Butler\Views\Account\Login.cshtml" target="content\Areas\Butler\Views\Account\Login.cshtml" />
+        <file src="..\Areas\Butler\Views\Setup\Index.cshtml" target="content\Areas\Butler\Views\Setup\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Edit.cshtml" target="content\Areas\Butler\Views\Shared\Edit.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Error.cshtml" target="content\Areas\Butler\Views\Shared\Error.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\Index.cshtml" target="content\Areas\Butler\Views\Shared\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Shared\_Layout.cshtml" target="content\Areas\Butler\Views\Shared\_Layout.cshtml" />
+        <file src="..\Areas\Butler\Views\Welcome\Index.cshtml" target="content\Areas\Butler\Views\Welcome\Index.cshtml" />
+        <file src="..\Areas\Butler\Views\Web.config" target="content\Areas\Butler\Views\Web.config" />
+        <file src="..\Areas\Butler\Views\_ViewStart.cshtml" target="content\Areas\Butler\Views\_ViewStart.cshtml" />
+        <file src="..\Areas\Butler\ButlerAreaRegistration.cs" target="content\Areas\Butler\ButlerAreaRegistration.cs" />
+        <file src="..\web.config.transform" target="content\web.config.transform" />
+    </files>
+</package>

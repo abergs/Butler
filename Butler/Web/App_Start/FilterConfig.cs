@@ -10,4 +10,17 @@ namespace Web
             filters.Add(new HandleErrorAttribute());
         }
     }
+
+    public class UninstalledAttribute : IAuthorizationFilter
+    {
+
+        public void OnAuthorization(AuthorizationContext filterContext)
+        {
+            // Look for existing users
+
+            //Butler.Store.GetNullable<Web.Models.
+
+
+        }
+    }
 }
