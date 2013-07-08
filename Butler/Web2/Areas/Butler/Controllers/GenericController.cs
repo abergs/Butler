@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
+    [Authorize]
     public class GenericController<T> : Controller where T : ButlerCore.ButlerDocument, new()
     {
         //
