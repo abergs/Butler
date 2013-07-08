@@ -1,8 +1,12 @@
 #Butler - ~~World~~ Developer Class CMS
 Butler won't get in your way. Build your site as you want to, then add Butler as a drop-in Backend for your models.
 
+*Word of warning; Butler is in Alpha2, fully working, but primitive. Works on my machine guarantee issued :)*
+
 ## What is Butler?
 Butler is a pluginnable backend for your MVC4 site. After installing the Nuget Package, an area will be added at `yourapp.com/Butler/` where you and your users can login, and create/edit/store models for your application. You can then retrieve the model and present it as you wish inside your views.
+
+###`Install-Package Butler`
 
 ## No bullshit
 Butler won't get in your way. Create your site, then add Butler to enable content editing. You don't have to create templates or setup page structures. 
@@ -36,7 +40,8 @@ Start your application, Head over to `/Butler`. Create a new MyEditablePageInfo.
 
 #### Fetch your Model in your Controller/view
 Now when you have stored data, you need to retrieve it in order to show it. This can be done in your controller (it can be done everywhere).
-    var info = ButlerCore.Store.Get<MyMvcApplication.Models.MyEditablePageInfo>("TheIDYouSpecifiedEarlier");
+	
+	var info = ButlerCore.Store.Get<MyMvcApplication.Models.MyEditablePageInfo>("TheIDYouSpecifiedEarlier");
 	ViewBag.MyInfo = info;
 	ViewBag.Title = info.Name;
 	
