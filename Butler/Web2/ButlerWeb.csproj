@@ -147,17 +147,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
     <Compile Include="Areas\Butler\ButlerAreaRegistration.cs" />
     <Compile Include="Areas\Butler\Controllers\AccountController.cs" />
+    <None Include="Areas\Butler\Controllers\ControllerFactory.cs.pp" />
     <Compile Include="Areas\Butler\Controllers\GenericController.cs" />
-    <Compile Include="Areas\Butler\Controllers\ControllerFactory.cs" />
     <Compile Include="Areas\Butler\Controllers\SetupController.cs" />
-    <Compile Include="Areas\Butler\Attributes\SetupOnlyAttribute.cs" />
     <Compile Include="Areas\Butler\Controllers\WelcomeController.cs" />
     <Compile Include="Areas\Butler\Helpers\Attributes.cs" />
     <Compile Include="Areas\Butler\Models\AccountModels.cs" />
-    <Compile Include="Areas\Butler\Models\GenericControllerModel.cs" />
     <Compile Include="Areas\Butler\Models\DocumentTypeWrapper.cs" />
+    <Compile Include="Areas\Butler\Models\GenericControllerModel.cs" />
     <Compile Include="Areas\Butler\Models\WelcomeViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,13 +165,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Foundation_readme.txt" />
-    <Content Include="Global.asax" />
-    <Content Include="Areas\Butler\Views\Web.config" />
-    <Content Include="LICENSE.txt" />
     <Content Include="Areas\Butler\Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
+    <Content Include="Foundation_readme.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="LICENSE.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -179,11 +178,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Areas\Butler\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Butler\Views\Shared\Error.cshtml" />
-    <Content Include="Areas\Butler\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Butler\Views\Shared\Index.cshtml" />
-    <Content Include="Areas\Butler\Views\Shared\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -192,100 +186,43 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Views\Welcome\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Views\Account\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Views\Account\Login.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="web.config.transform" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Views\Setup\Index.cshtml" />
+    <Content Include="Views\Home\Foundation_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\Site.scss" />
+    <Content Include="Areas\Butler\Content\_foundation.mvc.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_visibility.scss" />
+    <Content Include="Areas\Butler\Content\_foundation.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_type.scss" />
+    <Content Include="Areas\Butler\Content\_normalize.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_top-bar.scss" />
+    <Content Include="Areas\Butler\Content\foundation\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_tooltips.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_alert-boxes.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_thumbs.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_block-grid.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_tables.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_breadcrumbs.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_switch.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_button-groups.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_sub-nav.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_buttons.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_split-buttons.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_clearing.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_side-nav.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_section.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_reveal.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_progress-bars.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_pricing-tables.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_panels.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_pagination.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_orbit.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_magellan.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_labels.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_keystrokes.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_joyride.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_inline-lists.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_grid.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_global.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_forms.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_flex-video.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_custom-forms.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Butler\Content\foundation\components\_dropdown-buttons.scss" />
@@ -294,40 +231,115 @@
     <Content Include="Areas\Butler\Content\foundation\components\_dropdown.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_custom-forms.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_flex-video.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_clearing.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_forms.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_buttons.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_global.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_button-groups.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_grid.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_breadcrumbs.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_inline-lists.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_block-grid.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_joyride.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\components\_alert-boxes.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_keystrokes.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\foundation\_variables.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_labels.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\_normalize.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_magellan.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\_foundation.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_orbit.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Butler\Content\_foundation.mvc.scss" />
+    <Content Include="Areas\Butler\Content\foundation\components\_pagination.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Foundation_Index.cshtml" />
+    <Content Include="Areas\Butler\Content\foundation\components\_panels.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_pricing-tables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_progress-bars.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_reveal.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_section.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_side-nav.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_split-buttons.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_sub-nav.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_switch.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_tables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_thumbs.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_tooltips.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_top-bar.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_type.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\foundation\components\_visibility.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Content\Site.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Account\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Setup\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Shared\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Shared\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Butler\Views\Welcome\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

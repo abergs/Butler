@@ -1,9 +1,5 @@
-﻿using ButlerWeb.Areas.Butler.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ButlerWeb.Areas.Butler.Models;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
@@ -27,7 +23,5 @@ namespace ButlerWeb.Areas.Butler.Controllers
             auth.AddUser(user);
             return RedirectToAction("Login", "Account");
         }
-
-
     }
 }

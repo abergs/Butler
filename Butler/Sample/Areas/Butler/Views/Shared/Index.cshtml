@@ -1,12 +1,24 @@
-﻿@model IEnumerable<dynamic>
+﻿@model GenericControllerModel
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-My model: @Model
+<div class="row">
+    <div class="large-12 columns">
+        <h2>@Model.Name</h2>
+        <a href="@Url.Action("Edit")" class="button">New</a>
 
-@foreach (var entity in Model)
-{
-     @Html.DisplayFor(e => entity)
-}
+        <ul class="large-block-grid-4">
+            @foreach (var entity in Model.Entities)
+            {
+                
+                <li>
+                    <a href="@Url.Action("Edit",new { Id = entity.ID })" class="entityListItem">
+                        @Html.DisplayFor(e => entity)
+                    </a>
+                </li>
+               
+            }
+        </ul>
+    </div>
+</div>
