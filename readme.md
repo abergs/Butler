@@ -42,6 +42,6 @@ Now when you have stored data, you need to retrieve it in order to show it. This
 	
 #### Done!
 
-Contact me (@bigCheeseAnders) if you have any questions. I'd be happy to help you!
+Contact me (@bigCheeseAnders) if you have any questions, feedback or anything else to discuss. I'd be happy to help you!
 Have a great day.
 
