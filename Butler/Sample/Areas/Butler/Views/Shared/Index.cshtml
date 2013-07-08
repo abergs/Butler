@@ -1,0 +1,12 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+My model: @Model
+
+@foreach (var entity in Model)
+{
+     @Html.DisplayFor(e => entity)
+}
