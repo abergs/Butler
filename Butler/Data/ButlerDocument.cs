@@ -7,6 +7,7 @@ namespace ButlerCore
 {
     public abstract class ButlerDocument
     {
-        public string ID { get; set; } 
+        public string ID { get; set; }
+        public virtual Func<dynamic, dynamic> OrderBy() { return m => m.ID; }
     }
 }

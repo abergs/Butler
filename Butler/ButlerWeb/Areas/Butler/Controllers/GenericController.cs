@@ -15,12 +15,15 @@ namespace ButlerWeb.Areas.Butler.Controllers
         public ActionResult Index()
         {
             List<T> entities = Store.GetAll<T>();
+
+            var sorting = entities[0].OrderBy();
+
             var model = new GenericControllerModel
                 {
                     Name = Attributes.GetName(typeof (T)),
-                    Entities = entities.Cast<dynamic>().ToList()
+                    Entities = entities.Cast<dynamic>().OrderBy(sorting).ToList()
                 };
-
+            
             return View(model);
         }
 

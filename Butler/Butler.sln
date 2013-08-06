@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerWeb", "ButlerWeb\Butl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{040E9944-8FFB-4B47-915C-8701C1D3E618}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButlerCore.Tests", "ButlerCore.Tests\ButlerCore.Tests.csproj", "{02DE455D-9B26-4543-9CB2-8FF0193F70E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{040E9944-8FFB-4B47-915C-8701C1D3E618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02DE455D-9B26-4543-9CB2-8FF0193F70E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DE455D-9B26-4543-9CB2-8FF0193F70E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DE455D-9B26-4543-9CB2-8FF0193F70E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DE455D-9B26-4543-9CB2-8FF0193F70E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
