@@ -9,15 +9,15 @@
         <h2>Welcome</h2>
 
         <ul class="large-block-grid-4">
-            <li>
-                @foreach (var docType in Model.Types)
-                {
+            @foreach (var docType in Model.Types)
+            {
+                <li>
                     <a href="@Url.Action("Index", docType.Type.Name)" class="entityListItem">
                         <h4>@docType.Name</h4>
                         <p>Click to edit</p>
                     </a>
-                }
-            </li>
+                </li>
+            }
         </ul>
     </div>
 </div>
