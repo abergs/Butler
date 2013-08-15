@@ -20,7 +20,7 @@ namespace ButlerWeb.Areas.Butler.Controllers
                 object area = requestContext.RouteData.DataTokens["area"];
                 if (area != null && area.ToString().ToLowerInvariant() == "butler")
                 {
-                    string rootspace = "$rootnamespace$";
+                    string rootspace = "ButlerWeb";
                     string models = "Models";
                     Type type = Type.GetType(string.Format("{0}.{1}.{2}", rootspace, models, controllerName));
 

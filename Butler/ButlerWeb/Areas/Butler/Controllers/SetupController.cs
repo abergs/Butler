@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using ButlerWeb.Areas.Butler.Models;
+using System.Web.Security;
 
 namespace ButlerWeb.Areas.Butler.Controllers
 {
@@ -21,6 +22,10 @@ namespace ButlerWeb.Areas.Butler.Controllers
         {
             var auth = new Authorization();
             auth.AddUser(user);
+
+            // Create session
+            FormsAuthentication.SetAuthCookie(user.Email, true);
+            
             return RedirectToAction("Login", "Account");
         }
     }

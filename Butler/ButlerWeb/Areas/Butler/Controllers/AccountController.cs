@@ -32,21 +32,24 @@ namespace ButlerWeb.Areas.Butler.Controllers
         [AllowAnonymous]
         public ActionResult Login(UserViewModel user)
         {
-            bool valid = false;
+            User validUser = null;
             foreach (User storedUser in _auth.Users)
             {
                 if (user.Username == storedUser.Email || user.Username == storedUser.Name)
                 {
                     // Validate password
-                    valid = BCrypt.Net.BCrypt.Verify(user.Password, storedUser.Password);
+                    if (BCrypt.Net.BCrypt.Verify(user.Password, storedUser.Password))
+                    {
+                        validUser = storedUser;
+                    }
                     break;
                 }
             }
 
-            if (valid)
+            if (validUser != null)
             {
                 // Create session
-                FormsAuthentication.SetAuthCookie(user.Email, false);
+                FormsAuthentication.SetAuthCookie(validUser.Email, true);
 
                 // Roles?
                 // Customer roleprovider?
@@ -83,6 +86,17 @@ namespace ButlerWeb.Areas.Butler.Controllers
         public class UserViewModel : User
         {
             public string Username { get; set; }
+
+            public UserViewModel()
+            {
+
+            }
+
+            public UserViewModel(User user)
+            {
+                Username = user.Email;
+                Password = user.Password;
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using ButlerCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace ButlerWeb.Areas.Butler.Models
 {
@@ -10,6 +11,7 @@ namespace ButlerWeb.Areas.Butler.Models
     {
         public string Name { get; set; }
         public string Email { get; set; }
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         public List<string> Roles { get; set; }
     }

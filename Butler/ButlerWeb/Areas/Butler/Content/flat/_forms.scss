@@ -1,0 +1,47 @@
+form{
+  input.error{
+    &:focus{
+      border-color: $alizarin;
+    }
+    color:$alizarin;
+  }
+  .success input{
+    border-color: $success-color;
+    color:$success-color;
+    &:focus{
+      border-color: $success-color;
+    }
+  }
+
+
+  .success label,
+  label.success{
+    @include form-label-error-color($success-color);
+  }
+  .success small,
+  small.success{
+   @include form-error-message($success-color);
+  }
+
+  span.prefix,
+  span.postfix {
+    border-color: $clouds;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+font-size:1.3em;
+}
